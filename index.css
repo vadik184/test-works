@@ -1,0 +1,44 @@
+:root {
+  --main-background: #181818;
+  --container-color: #282828;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-background);
+}
+.mainTitle {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.72px;
+  color: beige;
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.workContainer {
+  background: transparent;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(
+      0deg,
+      rgba(31, 31, 31, 1) 10%,
+      rgba(56, 56, 56, 1) 100%
+    ),
+    linear-gradient(0deg, #383838, #484848);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  width: 350px;
+  height: 250px;
+}
