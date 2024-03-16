@@ -54,7 +54,7 @@ body {
 .cardContainer {
   height: 400px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap1;
   justify-content: start;
 }
 .card {
