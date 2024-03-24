@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Card</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .todo-card {
+        max-width: 400px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .todo-card h3 {
+        margin-top: 0;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .todo-card p {
+        margin-bottom: 20px;
+        color: #666;
+      }
+
+      .todo-card textarea {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+      }
+
+      .todo-card button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .todo-card button.edit {
+        background-color: #007bff;
+        color: #fff;
+        margin-right: 10px;
+      }
+
+      .todo-card button.delete {
+        background-color: #dc3545;
+        color: #fff;
+      }
+
+      .color-picker {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+      }
+
+      .color-change {
+        padding: 5px 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .color-options {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: none;
+        z-index: 1;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .color-option {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 5px;
+        border: 2px solid transparent;
+        transition: transform 0.3s ease;
+      }
+
+      .color-option:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-card">
+      <h3>Title</h3>
+      <p>Task description goes here.</p>
+      <textarea rows="4" placeholder="Enter task"></textarea>
+      <button class="edit">Edit</button>
+      <button class="delete">Delete</button>
+      <div class="color-picker">
+        <button class="color-change">Change Color</button>
+        <div class="color-options">
+          <div class="color-option" style="background-color: #007bff"></div>
+          <div class="color-option" style="background-color: #28a745"></div>
+          <div class="color-option" style="background-color: #ffc107"></div>
+          <div class="color-option" style="background-color: #dc3545"></div>
+          <div class="color-option" style="background-color: #6c757d"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const todoCard = document.querySelector(".todo-card");
+      const editButton = document.querySelector(".edit");
+      const deleteButton = document.querySelector(".delete");
+      const colorChangeButton = document.querySelector(".color-change");
+      const colorOptions = document.querySelector(".color-options");
+
+      editButton.addEventListener("click", () => {
+        const newTitle = prompt(
+          "Enter new title:",
+          todoCard.querySelector("h3").textContent
+        );
+        const newDescription = prompt(
+          "Enter new description:",
+          todoCard.querySelector("p").textContent
+        );
+        if (newTitle !== null && newDescription !== null) {
+          todoCard.querySelector("h3").textContent = newTitle;
+          todoCard.querySelector("p").textContent = newDescription;
+        }
+      });
+
+      deleteButton.addEventListener("click", () => {
+        todoCard.remove();
+      });
+
+      colorChangeButton.addEventListener("click", () => {
+        colorOptions.style.display = "block";
+      });
+
+      colorOptions.addEventListener("click", (event) => {
+        const colorOption = event.target.closest(".color-option");
+        if (colorOption) {
+          todoCard.style.backgroundColor = colorOption.style.backgroundColor;
+          colorOptions.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
