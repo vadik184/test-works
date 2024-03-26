@@ -146,6 +146,9 @@ img {
   margin-right: 43px;
   margin-left: 14px;
 }
+.inside-text-fild {
+  width: 100%;
+}
 .task-title {
   font-size: 24px;
   font-weight: bold;
@@ -161,7 +164,7 @@ img {
   background-color: var(--task-fild);
   border: none;
   border-radius: 15px;
-  width: 100%;
+  width: (100% - 10px);
   min-height: 100px;
   margin-top: 10px;
   outline: transparent;
@@ -172,6 +175,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  padding: 10px;
 }
 /* #task-fild {
   background-color: var(--task-fild);
