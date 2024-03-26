@@ -1,154 +1,72 @@
 :root {
-  --main-background: #181818;
-  --container-color: #282828;
-  --main-light: #fff;
+  --main-background: #d9d9d9;
+  --container-color: #f4f3f3;
+  --text-add: #919191;
 }
-/* 
-.toDoMainContainer {
-  min-width: 200px;
-  max-width: 350px;
-  min-height: 200px;
-  border: 1px solid #7f8195;
-
-  margin: 25px;
-  padding: 3px;
-  background-color: var(--main-light);
-  overflow: hidden;
-  border-radius: 10px;
-}
-.toDoTitle {
-  width: 100%;
-  min-height: 10px;
-  margin: 0;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #fff;
-}
-.titleContainer {
-  background-color: green;
-  border-radius: 6px;
-  padding: 1px 7px 1px 7px;
-}
-.addContainer {
-  display: flex;
-  margin: 25px;
-  align-items: center;
-  width: 350px;
-  gap: 10px;
-}
-.addtext {
-  color: #7f8195;
-}
-.addBtn {
-  display: flex;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-} */
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  margin: 0;
+  background-color: var(--main-background);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.add-fild {
   display: flex;
+  max-width: 384px;
+  min-height: 85px;
+  background-color: var(--container-color);
+  border-radius: 15px;
+  margin-top: 22px;
+  margin-left: 22px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
-
-.todo-card {
-  max-width: 400px;
+.add-fild-container {
   width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.todo-card h3 {
   display: flex;
-  margin-top: 0;
+  justify-content: space-between;
+}
+.task-title {
   font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-  justify-content: center;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--text-add);
+  margin-left: 63px;
+  align-content: center;
 }
-
-.todo-card textarea {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  resize: vertical;
-}
-.buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  width: 100%;
-}
-.todo-card button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.todo-card button.edit {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.todo-card button.delete {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.color-picker {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.color-change {
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  height: 100%;
-}
-
-.color-options {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  display: none;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.color-option {
-  width: 30px;
-  height: 30px;
+.add-btn {
+  display: block;
+  width: 57px;
+  height: 57px;
   border-radius: 50%;
+  background-color: var(--main-background);
+  border: none;
   cursor: pointer;
-  margin-right: 5px;
-  border: 2px solid transparent;
-  transition: transform 0.3s ease;
+  margin-right: 38px;
 }
-
-.color-option:hover {
-  transform: scale(1.1);
+.add-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
 }
