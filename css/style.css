@@ -157,7 +157,23 @@ img {
   color: var(--text-add);
   align-content: center;
 }
-#task-fild {
+.task-text {
+  background-color: var(--task-fild);
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+  outline: transparent;
+  resize: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+/* #task-fild {
   background-color: var(--task-fild);
   border: none;
   border-radius: 15px;
@@ -171,7 +187,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-}
+} */
 
 .btn-container {
   display: flex;
