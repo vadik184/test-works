@@ -165,7 +165,7 @@ img {
   border: none;
   border-radius: 15px;
   width: (100% - 10px);
-  min-height: 100px;
+  /* min-height: 100px; */
   margin-top: 10px;
   outline: transparent;
   resize: none;
@@ -176,6 +176,7 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   padding: 10px;
+  color: #5c5c5c;
 }
 /* #task-fild {
   background-color: var(--task-fild);
