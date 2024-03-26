@@ -2,6 +2,7 @@
   --main-background: #d9d9d9;
   --container-color: #f4f3f3;
   --text-add: #919191;
+  --task-fild: #edeaea;
 }
 body {
   margin: 0;
@@ -20,30 +21,33 @@ h6 {
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.add-fild {
-  display: flex;
+.add-section {
+  display: block;
+  margin: 0 auto;
   max-width: 384px;
   min-height: 85px;
   background-color: var(--container-color);
   border-radius: 15px;
   margin-top: 22px;
-  margin-left: 22px;
-  justify-content: center;
-  align-items: center;
 }
+
 .add-fild-container {
   width: 100%;
   display: flex;
+  padding: 14px;
+  align-items: center;
   justify-content: space-between;
 }
-.task-title {
-  font-size: 24px;
+
+.add-title {
+  font-size: 22px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -51,7 +55,7 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--text-add);
-  margin-left: 63px;
+  margin-left: 20px;
   align-content: center;
 }
 .add-btn {
@@ -69,4 +73,91 @@ img {
   width: 36px;
   height: 36px;
   margin: 0 auto;
+}
+.task-section {
+  display: block;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 22px;
+  max-width: 384px;
+}
+.card-list {
+}
+.task-card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--container-color);
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+}
+.task-title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--text-add);
+  align-content: center;
+}
+#task-fild {
+  background-color: var(--task-fild);
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  margin-top: 10px;
+  outline: transparent;
+  resize: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  margin-top: 14px;
+  justify-content: flex-end;
+}
+.edit-btn {
+  width: 96px;
+  height: 45px;
+  background-color: #0085ff;
+  border-radius: 10px;
+  border: none;
+  margin-right: 11px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #fff;
+  align-content: center;
+  cursor: pointer;
+}
+.delete-btn {
+  width: 96px;
+  height: 45px;
+  background-color: #ff0000;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #fff;
+  align-content: center;
+  cursor: pointer;
 }

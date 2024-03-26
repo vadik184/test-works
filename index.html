@@ -16,14 +16,35 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="add-fild">
+    <section class="add-section">
       <div class="add-fild-container">
-        <h3 class="task-title">add new task</h3>
+        <h3 class="add-title">додати нове завдання</h3>
         <button type="button" class="add-btn">
           <svg class="add-icon">
             <use href="img/icons.svg#icon-addBtn"></use>
           </svg>
         </button>
+      </div>
+    </section>
+    <section class="task-section">
+      <div class="card-fild">
+        <ul class="card-list">
+          <li class="card-item">
+            <div class="task-card">
+              <h3 class="task-title">Назва</h3>
+              <textarea
+                name="task-fild"
+                id="task-fild"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <div class="btn-container">
+                <button type="button" class="edit-btn">Редагувати</button>
+                <button type="button" class="delete-btn">Видалити</button>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <script src="js/1js.js"></script>
