@@ -81,17 +81,70 @@ img {
   margin-top: 22px;
   max-width: 350px;
 }
-.card-list {
-}
+
 .task-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-
   background-color: var(--container-color);
   border-radius: 15px;
   justify-content: center;
   align-items: center;
   padding: 14px;
+}
+.inside-card-list {
+  width: 100%;
+}
+
+.color-picker {
+  display: flex;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.card-item {
+}
+.color-change {
+  display: flex;
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+  border: none;
+  background: conic-gradient(red, orange, yellow, green, blue, purple, red);
+  color: #fff;
+  cursor: pointer;
+}
+.color-options {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: none;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 5px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.card-list {
+}
+.item-title {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 43px;
+  margin-left: 14px;
 }
 .task-title {
   font-size: 24px;

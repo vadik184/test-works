@@ -31,17 +31,50 @@
         <ul class="card-list">
           <li class="card-item">
             <div class="task-card">
-              <h3 class="task-title">Назва</h3>
-              <textarea
-                name="task-fild"
-                id="task-fild"
-                cols="30"
-                rows="10"
-              ></textarea>
-              <div class="btn-container">
-                <button type="button" class="edit-btn">Редагувати</button>
-                <button type="button" class="delete-btn">Видалити</button>
+              <div class="color-picker">
+                <button class="color-change"></button>
+                <div class="color-options">
+                  <div
+                    class="color-option"
+                    style="background-color: #007bff"
+                  ></div>
+                  <div
+                    class="color-option"
+                    style="background-color: #28a745"
+                  ></div>
+                  <div
+                    class="color-option"
+                    style="background-color: #ffc107"
+                  ></div>
+                  <div
+                    class="color-option"
+                    style="background-color: #dc3545"
+                  ></div>
+                  <div
+                    class="color-option"
+                    style="background-color: #6c757d"
+                  ></div>
+                </div>
               </div>
+              <ul class="inside-card-list">
+                <li class="item-title">
+                  <h3 class="task-title">Назва</h3>
+                </li>
+                <li>
+                  <textarea
+                    name="task-fild"
+                    id="task-fild"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </li>
+                <li>
+                  <div class="btn-container">
+                    <button type="button" class="edit-btn">Редагувати</button>
+                    <button type="button" class="delete-btn">Видалити</button>
+                  </div>
+                </li>
+              </ul>
             </div>
           </li>
         </ul>
