@@ -98,12 +98,30 @@ img {
 
 .color-picker {
   display: flex;
-  position: absolute;
-  top: 14px;
-  right: 14px;
+  position: relative;
 }
 .card-item {
 }
+.color-option-list {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: none;
+  grid-template-columns: repeat(3, 30px);
+  gap: 10px;
+  z-index: 1;
+  background-color: rgb(255 255 255 / 50%);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  backdrop-filter: blur(30px);
+  transition: transform 0.3s ease;
+}
+.show-grid {
+  display: grid;
+  transition: transform 0.3s ease;
+}
+
 .color-change {
   display: flex;
   height: 29px;
@@ -114,18 +132,8 @@ img {
   color: #fff;
   cursor: pointer;
 }
-.color-options {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  display: none;
-  z-index: 1;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-}
-.color-option {
+
+.color-option-item {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -140,10 +148,15 @@ img {
 
 .card-list {
 }
+
+.title-color {
+  display: flex;
+  justify-content: space-between;
+}
 .item-title {
   display: flex;
-  justify-content: flex-start;
-  margin-right: 43px;
+  /* justify-content: flex-start; */
+  /* margin-right: 43px; */
   margin-left: 14px;
 }
 .inside-text-fild {
